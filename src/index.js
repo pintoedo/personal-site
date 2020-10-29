@@ -5,18 +5,18 @@ import ReactFullpage from '@fullpage/react-fullpage';
 import './styles.css';
 
 const technologies = [
-  { name: 'Javascript', path: require('./assets/javascript.png') },
-  { name: 'Typescript', path: require('./assets/typescript.png') },
-  { name: 'React', path: require('./assets/react.png') },
-  { name: 'React Native', path: require('./assets/reactnative.png') },
-  { name: 'Angular', path: require('./assets/angular.png') },
-  { name: 'Node.js', path: require('./assets/nodejs.png') },
-  { name: 'Express', path: require('./assets/express.png') },
-  { name: 'Koa', path: require('./assets/koa.png') },
-  { name: 'MongoDB', path: require('./assets/mongodb.png') },
-  { name: 'Mongoose', path: require('./assets/mongoose.png') },
-  { name: 'SQL', path: require('./assets/sql.png') },
-  { name: 'GraphQL', path: require('./assets/graphql.png') },
+  'Javascript',
+  'Typescript',
+  'React',
+  'React Native',
+  'Angular',
+  'Node.js',
+  'Express',
+  'Koa',
+  'MongoDB',
+  'Mongoose',
+  'SQL',
+  'GraphQL',
 ];
 
 const karaUrl = 'https://github.com/fullstacksmart/kara-jobs';
@@ -43,13 +43,16 @@ class FullpageWrapper extends React.Component {
             <div id="fullpage-wrapper">
               <div className="section section1">
                 <h3>i'm eduardo</h3>
+                <h4 className="line typing">
+                  A creative Full Stack Developer :)
+                </h4>
               </div>
               <div className="section">
                 <div className="tech">
                   <ul>
                     {technologies.map((item) => (
                       <li>
-                        <h4>{item.name}</h4>
+                        <h4>{item}</h4>
                       </li>
                     ))}
                   </ul>
@@ -59,14 +62,25 @@ class FullpageWrapper extends React.Component {
                 <div className="slide">
                   <div class="project">
                     <a href="https://github.com/fullstacksmart/kara-jobs">
-                      kara
-                    </a>
-                    <a href="https://github.com/fullstacksmart/kara-jobs">
                       <img
                         src={require('./assets/Kara-mobile.gif')}
                       />
                     </a>
-                    <h3></h3>
+                    <div className="project-info">
+                      <h1>Kara</h1>
+                      <li className="centerh4">
+                        Kara is a job platform that connects
+                        international health care professionals with
+                        German employers.{' '}
+                      </li>
+                      <li className="centerh4">
+                        Tech-stack: React, Redux, Typescript,
+                        Firebase, Koa, PostgreSQL, lots of love 💟 .
+                      </li>
+                      <button className="repo-button">
+                        Github Repo
+                      </button>
+                    </div>
                   </div>
                 </div>
                 <div className="slide">
@@ -82,9 +96,29 @@ class FullpageWrapper extends React.Component {
               </div>
               <div className="section">
                 <h3>Get in touch</h3>
-                <button onClick={() => fullpageApi.moveTo(1, 0)}>
+                <div className="social">
+                  <a href="https://linkedin.com/in/pintocodes">
+                    <img
+                      className="social-icon"
+                      src={require('./assets/linkedin.png')}
+                    />
+                  </a>
+                  <a href="https://github.com/pintoedo">
+                    <img
+                      className="social-icon"
+                      src={require('./assets/github.png')}
+                    />
+                  </a>
+                  <a href="mailto:edu@pinto.codes">
+                    <img
+                      className="social-icon"
+                      src={require('./assets/email.png')}
+                    />
+                  </a>
+                </div>
+                {/* <button onClick={() => fullpageApi.moveTo(1, 0)}>
                   Move top
-                </button>
+                </button> */}
               </div>
             </div>
           );
