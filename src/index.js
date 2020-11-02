@@ -19,10 +19,6 @@ const technologies = [
   'GraphQL',
 ];
 
-const karaUrl = 'https://github.com/fullstacksmart/kara-jobs';
-const fleetspyUrl = 'https://github.com/fullstacksmart/kara-jobs';
-const spacewayUrl = 'https://github.com/pintoedo/spaceway';
-
 class FullpageWrapper extends React.Component {
   onLeave(origin, destination, direction) {
     console.log('Leaving section ' + origin.index);
@@ -42,61 +38,85 @@ class FullpageWrapper extends React.Component {
           return (
             <div id="fullpage-wrapper">
               <div className="section section1">
-                <h3>i'm eduardo</h3>
-                <h4 className="line typing">
-                  A creative Full Stack Developer :)
-                </h4>
+                <div class="text-container">
+                  <h1>
+                    <span>I'm Eduardo</span>
+                  </h1>
+                  <p>
+                    a creative Full-stack Developer from Berlin :)
+                  </p>
+                </div>
               </div>
               <div className="section">
                 <div className="tech">
-                  <ul>
-                    {technologies.map((item) => (
-                      <li>
-                        <h4>{item}</h4>
-                      </li>
-                    ))}
-                  </ul>
+                  <div class="text-outer-container">
+                    <h2>
+                      <span>My Tech Stack</span>
+                    </h2>
+                    <ul>
+                      {technologies.map((item) => (
+                        <li>
+                          <h4>{item}</h4>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
                 </div>
               </div>
               <div className="section">
-                <div className="slide">
-                  <div class="project">
-                    <a href="https://github.com/fullstacksmart/kara-jobs">
-                      <img
-                        src={require('./assets/Kara-mobile.gif')}
-                      />
-                    </a>
-                    <div className="project-info">
-                      <h1>Kara</h1>
-                      <li className="centerh4">
-                        Kara is a job platform that connects
-                        international health care professionals with
-                        German employers.{' '}
-                      </li>
-                      <li className="centerh4">
-                        Tech-stack: React, Redux, Typescript,
-                        Firebase, Koa, PostgreSQL, lots of love 💟 .
-                      </li>
-                      <button className="repo-button">
-                        Github Repo
-                      </button>
+                <section class="projects">
+                  <div class="clip-container">bla</div>
+                  <div class="projects-container">
+                    <div class="text-outer-container">
+                      <h2>
+                        <span>Latest Projects</span>
+                      </h2>
+                      <ul class="projects-list">
+                        <li>
+                          <a href="https://github.com/fullstacksmart/kara-jobs">
+                            <img
+                              src={require('./assets/karamobile.gif')}
+                            />
+                          </a>
+                          <h3>
+                            <a href="https://github.com/fullstacksmart/kara-jobs">
+                              Kara
+                            </a>
+                          </h3>
+                        </li>
+                        <li>
+                          <a href="https://github.com/fullstacksmart/spaceway">
+                            <img
+                              src={require('./assets/spaceway-mobile.gif')}
+                            />
+                          </a>
+                          <h3>
+                            <a href="https://github.com/fullstacksmart/spaceway">
+                              Spaceway
+                            </a>
+                          </h3>
+                        </li>
+                        <li>
+                          <a href="https://github.com/fullstacksmart/fleetSpy">
+                            <img
+                              className="fleetspy"
+                              src={require('./assets/fleetspu.png')}
+                            />
+                          </a>
+                          <h3>
+                            <a href="https://github.com/atsteinberg/fleetSpy">
+                              FleetSpy
+                            </a>
+                          </h3>
+                        </li>
+                      </ul>
                     </div>
                   </div>
-                </div>
-                <div className="slide">
-                  <div className="project">
-                    <h4 className="centerh4">FleetSPY</h4>
-                  </div>
-                </div>
-                <div className="slide">
-                  <div className="project">
-                    <h4 className="centerh4">Spaceway</h4>
-                  </div>
-                </div>
+                </section>
               </div>
               <div className="section">
-                <h3>Get in touch</h3>
                 <div className="social">
+                  <h2>Let's get in touch!</h2>
                   <a href="https://linkedin.com/in/pintocodes">
                     <img
                       className="social-icon"
@@ -116,9 +136,6 @@ class FullpageWrapper extends React.Component {
                     />
                   </a>
                 </div>
-                {/* <button onClick={() => fullpageApi.moveTo(1, 0)}>
-                  Move top
-                </button> */}
               </div>
             </div>
           );
